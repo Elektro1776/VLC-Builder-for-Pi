@@ -1,4 +1,7 @@
 #!/bin/bash
+clear
+mkdir building
+cd building
 echo "Removing VLC if installed..."
 sudo apt-get purge vlc && sudo apt-get autoremove
 clear
@@ -33,3 +36,8 @@ sudo ln -s /usr/local/lib/vlc /usr/lib/vlc
 echo "Installation complete"
 echo "Trying to run vlc..."
 vlc --vout omxil_vout
+read -p "Cleanup and delete source to save disk space?";
+if [ $REPLY == "yes" ]; then
+	cd ..
+	sudo rm -rf building
+fi
