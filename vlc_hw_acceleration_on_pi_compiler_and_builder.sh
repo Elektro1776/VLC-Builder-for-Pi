@@ -1,19 +1,15 @@
 #!/bin/bash
-clear
-mkdir building
-cd building
-echo "Removing VLC if installed..."
-sudo apt-get purge vlc && sudo apt-get autoremove
+
 clear
 echo "Preparing your system..."
-sudo apt-get update && sudo apt-get full-upgrade && sudo apt-get autoclean && sudo apt-get clean
+sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean
 echo "Updating gcc..."
 sudo apt-get install gcc-4.7 g++-4.7
 sudo update-alternatives --remove-all gcc
 sudo update-alternatives --remove-all g++
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.6
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
-echo "Select gcc 4.7"
+echo "If asked to select gcc, select gcc 4.7"
 sudo update-alternatives --config gcc
 echo "Preparing environment..."
 sudo apt-get install git libtool build-essential pkg-config autoconf
@@ -36,8 +32,8 @@ sudo ln -s /usr/local/lib/vlc /usr/lib/vlc
 echo "Installation complete"
 echo "Trying to run vlc..."
 vlc --vout omxil_vout
-read -p "Cleanup and delete source to save disk space?";
-if [ $REPLY == "yes" ]; then
+read -p "Cleanup and delete source to save disk space? [y/n]";
+if [ $REPLY == "y" ]; then
 	cd ..
 	sudo rm -rf building
 fi
