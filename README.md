@@ -1,5 +1,6 @@
 # VLC for Pi Builder
 A script to download, compile, optimize, build, and install VLC from source with hardware acceleration modules for Raspberry Pi. It is compatible with all linux based operating systems which uses APT or Advanced Package Tool.
+
 ![Screenshot](https://raw.githubusercontent.com/kvsjxd/VLC-Builder-for-Pi/gh-pages/images/Screenshot.png)
 
 ## To use, run the below given command on terminal of Raspberry Pi
