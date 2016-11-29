@@ -1,6 +1,9 @@
 #!/bin/bash
-
-clear
+|---------------------------------------|
+|    VLC Builder for Pi (Version 1.2)   |
+|           By Karanvir Singh           |
+|---------------------------------------|
+echo ""
 echo "Preparing your system..."
 sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean
 echo "Updating gcc..."
