@@ -12,7 +12,7 @@ sudo update-alternatives --remove-all gcc
 sudo update-alternatives --remove-all g++
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.6
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
-echo "If asked to select gcc, select gcc 4.7"
+echo "If asked to select gcc, select gcc 4.7 or else ignore this message..."
 sudo update-alternatives --config gcc
 echo "Preparing environment..."
 sudo apt-get install git libtool build-essential pkg-config autoconf
