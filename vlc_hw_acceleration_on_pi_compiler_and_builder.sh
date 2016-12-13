@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "|---------------------------------------|"
-echo "|    VLC Builder for Pi (Version 1.2)   |"
+echo "|    VLC Builder for Pi (Version 1.3)   |"
 echo "|           By Karanvir Singh           |"
 echo "|---------------------------------------|"
 echo ""
