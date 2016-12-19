@@ -1,0 +1,8 @@
+title: VLC Builder for Raspberry Pi
+description: This script compiles, builds, and install VLC from source with hardware acceleration modules for Raspberry Pi.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions
